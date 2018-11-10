@@ -4,4 +4,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def indexPageView(request):
-    return HttpResponse("Hello World !!")
+    simple_message_dict = {'check_message':'Hello From the views.py file'}
+    return render(request,"appone/basic.html",context=simple_message_dict)
